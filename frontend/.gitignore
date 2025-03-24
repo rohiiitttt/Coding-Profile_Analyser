@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Build files
+build/
+*.cache
+
+# Testing
+coverage/
