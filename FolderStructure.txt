@@ -1,0 +1,80 @@
+root/
+│
+├── backend/                         # Backend (Node.js/Express.js)
+│   ├── config/
+│   │   └── db.js                    # MongoDB connection setup
+│   │
+│   ├── controllers/                 # Business logic
+│   │   ├── authController.js        # User auth logic (login/signup)
+│   │   ├── profileController.js     # Profile data handling
+│   │   ├── problemController.js     # Problem tracking logic
+│   │   └── aiController.js          # AI integration logic
+│   │
+│   ├── middleware/                  # Middlewares
+│   │   ├── auth.js                  # JWT authentication
+│   │   └── errorHandler.js          # Custom error handling
+│   │
+│   ├── models/                      # MongoDB Schemas
+│   │   ├── User.js                  # User schema (as per doc)
+│   │   ├── Profile.js               # Profile schema
+│   │   └── Problem.js               # Problem schema
+│   │
+│   ├── routes/                      # API routes
+│   │   ├── auth.js                  # Auth routes (/login, /signup)
+│   │   ├── profile.js               # Profile routes (/profile)
+│   │   ├── problems.js              # Problem routes (/problems)
+│   │   └── ai.js                    # AI routes (/recommend, /analyze)
+│   │
+│   ├── services/                    # Helper services
+│   │   ├── leetcodeAPI.js           # LeetCode API integration
+│   │   ├── codeforcesAPI.js         # Codeforces API integration
+│   │   └── githubAPI.js             # GitHub API integration
+│   │
+│   ├── utils/                       # Utilities
+│   │   ├── logger.js                # Logging utility
+│   │   └── validation.js            # Request validation
+│   │
+│   └── server.js                    # Express server entry point
+│
+├── frontend/                        # Frontend (React.js)
+│   ├── public/                      # Static files
+│   │   ├── index.html
+│   │   └── assets/                  # Images, icons, etc.
+│   │
+│   ├── src/
+│   │   ├── components/              # Reusable components
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.jsx        # Login form
+│   │   │   │   └── Signup.jsx       # Signup form
+│   │   │   ├── dashboard/
+│   │   │   │   ├── StatsCard.jsx    # Stats visualization
+│   │   │   │   └── ProgressChart.jsx # Recharts component
+│   │   │   └── problems/
+│   │   │       └── ProblemList.jsx  # Problem recommendations
+│   │   │
+│   │   ├── pages/                   # Page components
+│   │   │   ├── Dashboard.jsx        # Main dashboard
+│   │   │   ├── Profile.jsx          # User profile
+│   │   │   └── Problems.jsx         # Problem tracking
+│   │   │
+│   │   ├── services/                # API service calls
+│   │   │   ├── auth.js              # Auth API calls
+│   │   │   ├── profile.js           # Profile API calls
+│   │   │   └── problems.js          # Problem API calls
+│   │   │
+│   │   ├── App.js                   # Main App router
+│   │   ├── index.js                 # React entry point
+│   │   └── styles/                  # Tailwind/CSS
+│   │       └── index.css
+│   │
+│   └── package.json
+│
+├── AI/                              # AI/ML Services (Python)
+│   ├── models/
+│   │   └── recommendation_model.pkl # Trained model binary
+│   ├── flask_api.py                 # Flask API (as per doc)
+│   └── requirements.txt             # Python dependencies
+│
+├── .gitignore
+├── package.json                     # Root scripts (if using monorepo)
+└── README.md
